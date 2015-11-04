@@ -1,0 +1,9 @@
+[ClassVersion("1.0.0.0"), FriendlyName("cDnsRecord")]
+class DDB_cDnsRecord : OMI_BaseResource
+{
+    [Key] string Name;
+    [Key] string Zone;
+    [Required,ValueMap{"A-record", "C-name"},Values{"A-record", "C-name"}] string Type;
+    [Required] string Target;
+};
+
